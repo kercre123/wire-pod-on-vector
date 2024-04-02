@@ -149,7 +149,7 @@ func Init() {
 		if runtime.GOOS == "android" || runtime.GOOS == "ios" {
 			confDir = AndroidPath
 		} else {
-			confDir, _ = os.UserConfigDir()
+			confDir = "/data/etc"
 		}
 		podDir := join(confDir, PodName)
 		appDir, _ := os.Executable()
